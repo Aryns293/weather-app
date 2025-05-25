@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,8 +7,8 @@
   font-family: "Rubik", sans-serif;
 }
 :root {
-  --font-color-main: #332464;
-  --white-color: #fff;
+  --font-color-main: #1a4d2e;
+  --white-color: #f5f5dc;
 }
 body {
   background-color: #B4D6F3;
@@ -211,4 +211,32 @@ h3 {
     width: 120px;
     height: 120px;
   } 
+}
+
+body.dark-mode {
+  --font-color-main: #e0e0e0;
+  --white-color: #e3eaf4; /* Use for main cards/containers */
+  background-color: #2d323b; /* Dim, soft dark */
+  color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #screen {
+  background-color: #e3eaf4; /* Keeps main card light for contrast */
+}
+
+body.dark-mode nav,
+body.dark-mode .weather-box,
+body.dark-mode .desc-box,
+body.dark-mode .today-forecast,
+body.dark-mode .future-forecast {
+  background-color: #373c46; /* Dim dark for panels */
+  color: #e0e0e0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode img, 
+body.dark-mode .weather-icon {
+  filter: brightness(90%) contrast(95%);
+  transition: filter 0.3s;
 }
